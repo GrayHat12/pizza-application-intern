@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+
+</head>
+<body class="container">
+	<h1>List of pizaa</h1>
+	<table class="table">
+		<tr th:each="product : ${products}">
+			<td th:text="${product.id}">Data</td>
+			<td th:text="${product.name}">Data</td>
+			<td th:text="${product.desc}">Data</td>
+			<td th:text="${product.price}">Data</td>
+		</tr>
+	</table>
+</body>
+
+</html>
