@@ -6,10 +6,12 @@ import java.util.List;
 public class GrayTokenizer {
 	
 	String text;
+	char deli;
 	
-	public GrayTokenizer(String txt)
+	public GrayTokenizer(String txt, char del)
 	{
 		this.text=txt;
+		this.deli=del;
 	}
 	
 	public List<String> tokenize()
@@ -18,7 +20,7 @@ public class GrayTokenizer {
 		String tmp="";
 		for(int i=0;i<this.text.length();i++)
 		{
-			if(this.text.charAt(i)=='\n')
+			if(this.text.charAt(i)==this.deli)
 			{
 				list.add(tmp);
 				tmp="";

@@ -27,7 +27,7 @@ public class Process {
                 try
                 {
                 	String output=execCmd("python getData.py "+link);
-                	List<String> tokens=new GrayTokenizer(output).tokenize();
+                	List<String> tokens=new GrayTokenizer(output,'\n').tokenize();
                 	title=tokens.get(0);
                 	author=tokens.get(1);
                 	mrl=tokens.get(2);

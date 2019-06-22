@@ -23,7 +23,10 @@ public class Search {
 	public Search(String query)
 	{
 		songList = new ArrayList<>();
-		this.term=query;
+		this.term="";
+		List<String> terms=new GrayTokenizer(query,'+').tokenize();
+		for(String trm:terms)
+			this.term+=trm+" ";
 		makeSearch();
 	}
 
