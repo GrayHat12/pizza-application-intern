@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import in.ac.sharda.pizzaapplication.domain.Product;
 import in.ac.sharda.pizzaapplication.service.ProductService;
 import in.ac.sharda.pizzaapplication.data.Song;
-import in.ac.sharda.pizzaapplication.data.Songs;;
+import in.ac.sharda.pizzaapplication.data.Songs;
+import in.ac.sharda.pizzaapplication.data.SongData;
 
 @RestController
 public class ProductDetailController {
@@ -27,5 +28,12 @@ public class ProductDetailController {
 	{
 		Songs ob=new Songs(query);
 		return ob.getSongs();
+	}
+	
+	@GetMapping("/songs/data/{id}")
+	public Song songDetail(@PathVariable("id") String query)
+	{
+		SongData ob=new SongData(query);
+		return ob.getData();
 	}
 }
