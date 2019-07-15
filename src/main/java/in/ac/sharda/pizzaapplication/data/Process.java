@@ -23,7 +23,7 @@ public class Process {
 		this.songList.parallelStream().forEach((link) -> {
 			if(link.startsWith("https:"))
             {
-                String title,author,mrl;
+                String title,author,mrl,thumb;
                 try
                 {
                 	String output=execCmd("python getData.py "+link);
@@ -31,7 +31,8 @@ public class Process {
                 	title=tokens.get(0);
                 	author=tokens.get(1);
                 	mrl=tokens.get(2);
-                	Song song=new Song(link,title,author,mrl);
+                	thumb=tokens.get(3);
+                	Song song=new Song(link,title,author,mrl,thumb);
                 	this.finalList.add(song);
                 }
                 catch(Exception ex)
