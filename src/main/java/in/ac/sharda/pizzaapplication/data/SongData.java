@@ -21,7 +21,8 @@ public class SongData {
         	String title=tokens.get(0);
         	String author=tokens.get(1);
         	String mrl=tokens.get(2);
-        	song=new Song(this.url,title,author,mrl);
+        	String thumb=tokens.get(3);
+        	song=new Song(this.url,title,author,mrl,thumb);
         }
         catch(Exception ex)
         {

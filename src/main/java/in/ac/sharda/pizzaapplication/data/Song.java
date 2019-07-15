@@ -6,6 +6,7 @@ public class Song {
 	private String title;
 	private String author;
 	private String mrl;
+	private String thumb;
 	
 	public String getUrl() {
 		return url;
@@ -15,6 +16,14 @@ public class Song {
 		this.url = url;
 	}
 
+	public String getThumb() {
+		return thumb;
+	}
+
+	private void setThumb(String thumb) {
+		this.thumb = thumb;
+	}
+	
 	public String getTitle() {
 		return title;
 	}
@@ -39,11 +48,12 @@ public class Song {
 		this.mrl = mrl;
 	}
 
-	public Song(String link,String titl,String auth,String ml)
+	public Song(String link,String titl,String auth,String ml, String thmb)
 	{
 		setUrl(link);
 		setTitle(titl);
 		setAuthor(auth);
 		setMrl(ml);
+		setThumb(thmb);
 	}
 }

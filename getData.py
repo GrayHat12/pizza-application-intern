@@ -6,6 +6,7 @@ def func(query):
     print(dat.title)
     print(dat.author)
     print(dat.getbestaudio().url_https)
+    print(dat.thumb)
 
 if __name__ == '__main__':
     #print(sys.argv)
